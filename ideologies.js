@@ -5,7 +5,7 @@ ideologies = [
 		"theory":"insert description here",
         "stats": {
             "state": 50,
-            "social": 50,
+            "cult": 50,
             "econ": 50,
             "spend": 50,
 			      "land": 50,
