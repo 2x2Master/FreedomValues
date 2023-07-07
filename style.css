@@ -218,92 +218,92 @@ div.text-wrapper {
     color: #dddddd;
     display: inline-block;
 }
-div.individual {
+div.anarchy {
     background-color: #009999;
     text-align: left;
     border-right-style: solid;
 }
-div.collective {
+div.minarchy {
     background-color: #DA0000;
     text-align: right;
     border-left-style: solid;
 }
-div.market {
+div.progress {
     background-color: #048CF4;
     text-align: left;
     border-right-style: solid;
 }
-div.planned {
+div.conserve {
     background-color: #FF4900;
     text-align: right;
     border-left-style: solid;
 }
-div.essentialist {
+div.reg {
     background-color: #00CC00;
     text-align: right;
     border-left-style: solid;
 }
-div.constructivist {
+div.markets {
     background-color: #CD0074;
     text-align: left;
     border-right-style: solid;
 }
-div.pragmatic {
+div.welfare {
     background-color: #A101B3;
     text-align: right;
     border-left-style: solid;
 }
-div.idealist {
+div.aust {
     background-color: #6AB001;
     text-align: left;
     border-right-style: solid;
 }
-div.universal {
+div.property {
     background-color: #048CF4;
     text-align: left;
     border-right-style: solid;
 }
-div.particular {
+div.georgist {
     background-color: #FFBF00;
     text-align: right;
     border-left-style: solid;
 }
-div.ecological {
+div.national {
     background-color: #00CC00;
     text-align: left;
     border-right-style: solid;
 }
-div.industrial {
+div.global {
     background-color: #FF7400;
     text-align: right;
     border-left-style: solid;
 }
-div.politicized {
+div.isolation {
     background-color: #009999;
     text-align: right;
     border-left-style: solid;
 }
-div.apolitical {
+div.inter {
     background-color: #808080;
     text-align: left;
     border-right-style: solid;
 }
-div.religious {
+div.dem {
     background-color: #FFBF00;
     text-align: right;
     border-left-style: solid;
 }
-div.secular {
+div.auto {
     background-color: #A600A6;
     text-align: left;
     border-right-style: solid;
 }
-div.futurist {
+div.revo {
     background-color: #074FF5;
     text-align: right;
     border-left-style: solid;
 }
-div.historic {
+div.reform {
     background-color: #FF7400;
     text-align: left;
     border-right-style: solid;
