@@ -27,25 +27,25 @@
     <h1>Results</h1>
 
     <!-- HACK TO GET IMAGES PROPERLY WORK ON CANVAS -->
-    <img id="img-individual" src="value_images/individual.svg" height="200%" style="display: none;"/>
-    <img id="img-market" src="value_images/market.svg" height="128pt" style="display: none;"/>
-    <img id="img-essentialist" src="value_images/essentialist.svg" height="128pt" style="display: none;"/>
-    <img id="img-pragmatic" src="value_images/pragmatic.svg" height="128pt" style="display: none;"/>
-    <img id="img-universal" src="value_images/universal.svg" height="128pt" style="display: none;"/>
-    <img id="img-ecological" src="value_images/ecological.svg" height="128pt" style="display: none;"/>
-    <img id="img-politicized" src="value_images/politicized.svg" height="128pt" style="display: none;"/>
-    <img id="img-religious" src="value_images/religious.svg" height="128pt" style="display: none;"/>
-    <img id="img-futurist" src="value_images/futurist.svg" height="128pt" style="display: none;"/>
+    <img id="img-anarchy" src="value_images/anarchy.svg" height="200%" style="display: none;"/>
+    <img id="img-progress" src="value_images/progress.svg" height="128pt" style="display: none;"/>
+    <img id="img-reg" src="value_images/reg.svg" height="128pt" style="display: none;"/>
+    <img id="img-welfare" src="value_images/welfare.svg" height="128pt" style="display: none;"/>
+    <img id="img-property" src="value_images/property.svg" height="128pt" style="display: none;"/>
+    <img id="img-national" src="value_images/national.svg" height="128pt" style="display: none;"/>
+    <img id="img-isolation" src="value_images/isolation.svg" height="128pt" style="display: none;"/>
+    <img id="img-dem" src="value_images/dem.svg" height="128pt" style="display: none;"/>
+    <img id="img-revo" src="value_images/revo.svg" height="128pt" style="display: none;"/>
 
-    <img id="img-collective" src="value_images/collective.svg" height="128pt" style="display: none;"/>
-    <img id="img-planned" src="value_images/planned.svg" height="128pt" style="display: none;"/>
-    <img id="img-constructivist" src="value_images/constructivist.svg" height="128pt" style="display: none;"/>
-    <img id="img-idealist" src="value_images/idealist.svg" height="128pt" style="display: none;"/>
-    <img id="img-particular" src="value_images/particular.svg" height="128pt" style="display: none;"/>
-    <img id="img-industrial" src="value_images/industrial.svg" height="128pt" style="display: none;"/>
-    <img id="img-apolitical" src="value_images/apolitical.svg" height="128pt" style="display: none;"/>
-    <img id="img-secular" src="value_images/secular.svg" height="128pt" style="display: none;"/>
-    <img id="img-historic" src="value_images/historic.svg" height="128pt" style="display: none;"/>
+    <img id="img-minarchy" src="value_images/minarchy.svg" height="128pt" style="display: none;"/>
+    <img id="img-conserve" src="value_images/conserve.svg" height="128pt" style="display: none;"/>
+    <img id="img-markets" src="value_images/markets.svg" height="128pt" style="display: none;"/>
+    <img id="img-aust" src="value_images/aust.svg" height="128pt" style="display: none;"/>
+    <img id="img-georgist" src="value_images/georgist.svg" height="128pt" style="display: none;"/>
+    <img id="img-global" src="value_images/global.svg" height="128pt" style="display: none;"/>
+    <img id="img-inter" src="value_images/inter.svg" height="128pt" style="display: none;"/>
+    <img id="img-auto" src="value_images/auto.svg" height="128pt" style="display: none;"/>
+    <img id="img-reform" src="value_images/reform.svg" height="128pt" style="display: none;"/>
 
 
     <p>Disclaimer: Proper data collection features were added with v1.0.0 and ideological assumptions can't be made before there's enough data.</p>
@@ -90,24 +90,24 @@
     }
 
     // GET VALUES
-    individual      = getQueryVariable("social")
-    market          = getQueryVariable("econ")
-    essentialist    = getQueryVariable("essence")
-    pragmatic       = getQueryVariable("moral")
-    universal       = getQueryVariable("apply")
-    ecological      = getQueryVariable("ecol")
-    politicized     = getQueryVariable("socpol")
-    religious       = getQueryVariable("relig")
-    futurist        = getQueryVariable("aesth")
-    collective      = (100 - individual     ).toFixed(1)
-    planned         = (100 - market         ).toFixed(1)
-    constructivist  = (100 - essentialist   ).toFixed(1)
-    idealist        = (100 - pragmatic      ).toFixed(1)
-    particular      = (100 - universal      ).toFixed(1)
-    industrial      = (100 - ecological     ).toFixed(1)
-    apolitical      = (100 - politicized    ).toFixed(1)
-    secular         = (100 - religious      ).toFixed(1)
-    historic        = (100 - futurist       ).toFixed(1)
+    anarchy      = getQueryVariable("social")
+    progress          = getQueryVariable("econ")
+    reg    = getQueryVariable("essence")
+    welfare       = getQueryVariable("moral")
+    property       = getQueryVariable("apply")
+    national      = getQueryVariable("ecol")
+    isolation     = getQueryVariable("socpol")
+    dem       = getQueryVariable("relig")
+    revo        = getQueryVariable("aesth")
+    minarchy      = (100 - anarchy     ).toFixed(1)
+    conserve         = (100 - progress         ).toFixed(1)
+    markets  = (100 - reg   ).toFixed(1)
+    aust        = (100 - welfare      ).toFixed(1)
+    georgist      = (100 - property      ).toFixed(1)
+    global      = (100 - national     ).toFixed(1)
+    inter      = (100 - isolation    ).toFixed(1)
+    auto         = (100 - dem      ).toFixed(1)
+    reform        = (100 - revo       ).toFixed(1)
 
     ideology = ""
     ideodesc = ""
@@ -115,15 +115,15 @@
     ideodist = Infinity
     for (var i = 0; i < ideologies.length; i++) {
         dist = 0
-        dist += Math.pow(Math.abs(ideologies[i].stats.social - individual), 2)
-        dist += Math.pow(Math.abs(ideologies[i].stats.econ - market), 2)
-        dist += Math.pow(Math.abs(ideologies[i].stats.essence - essentialist), 2)
-        dist += Math.pow(Math.abs(ideologies[i].stats.moral - pragmatic), 2)
-        dist += Math.pow(Math.abs(ideologies[i].stats.apply - universal), 2)
-        dist += Math.pow(Math.abs(ideologies[i].stats.ecol - ecological), 2)
-        dist += Math.pow(Math.abs(ideologies[i].stats.socpol - politicized), 2)
-        dist += Math.pow(Math.abs(ideologies[i].stats.relig - religious), 2)
-        dist += Math.pow(Math.abs(ideologies[i].stats.aesth - futurist), 2)
+        dist += Math.pow(Math.abs(ideologies[i].stats.social - anarchy), 2)
+        dist += Math.pow(Math.abs(ideologies[i].stats.econ - progress), 2)
+        dist += Math.pow(Math.abs(ideologies[i].stats.essence - reg), 2)
+        dist += Math.pow(Math.abs(ideologies[i].stats.moral - welfare), 2)
+        dist += Math.pow(Math.abs(ideologies[i].stats.apply - property), 2)
+        dist += Math.pow(Math.abs(ideologies[i].stats.ecol - national), 2)
+        dist += Math.pow(Math.abs(ideologies[i].stats.socpol - isolation), 2)
+        dist += Math.pow(Math.abs(ideologies[i].stats.relig - dem), 2)
+        dist += Math.pow(Math.abs(ideologies[i].stats.aesth - revo), 2)
         if (dist < ideodist) {
             ideology = ideologies[i].name
             ideodesc = ideologies[i].desc
