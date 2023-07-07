@@ -1,8 +1,6 @@
 ideologies = [
     {
         "name": "Template",
-		"desc": "insert name here",
-		"theory":"insert description here",
         "stats": {
             "state": 50,
             "social": 50,
