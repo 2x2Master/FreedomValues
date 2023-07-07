@@ -1,198 +1,125 @@
 <head>
-    <meta charset="utf-8">
-    <title>FreedomValues Quiz</title>
-
-
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Roboto:400,700" rel="stylesheet">
-    <link href='style.css' rel='stylesheet' type='text/css'>
-    <link rel="icon" type="x-icon" href="icon.png">
-    <link rel="shortcut icon" type="x-icon" href="icon.png">
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-99715444-5"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-99715444-5');
-    </script>
-    <!-- -->
-    <script type="application/javascript" src="questions.js"></script>
-    <script type="application/javascript" src="results_dat.js"></script>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Roboto:400,700" rel="stylesheet">
+<link href='style.css' rel='stylesheet' type='text/css'>
+<title>9Axes Quiz</title>
+<link rel="icon" type="x-icon" href="icon.png">
+<link rel="shortcut icon" type="x-icon" href="icon.png">
+<meta charset="utf-8">
 </head>
-
 <body>
-
-
-<h1>FreedomValues</h1>
+<script type="application/javascript"
+        src="questions.js">
+</script>
+<h1>9Axes</h1>
 <hr>
-
 <h2 style="text-align:center;" id="question-number">Loading...</h2>
 <p class="question" id="question-text"></p>
-<button class="button" onclick="next_question(1.0)" style="background-color: #1b5e20;">Strongly Agree</button> <br>
-<button class="button" onclick="next_question(0.5)" style="background-color: #4caf50;">Agree</button> <br>
-<button class="button" onclick="next_question(0.0)" style="background-color: #a9a9a9;">Neutral</button> <br>
-<button class="button" onclick="next_question(-0.5)" style="background-color: #f44336;">Disagree</button> <br>
-<button class="button" onclick="next_question(-1.0)" style="background-color: #b71c1c;">Strongly Disagree</button> <br>
-<button class="button" onclick="next_question(null)" style="background-color: #a9a9a9;">Don't Know/Understand</button> <br>
-<button class="small_button" onclick="prev_question()" id="back_button">Back</button>
-<button class="small_button_off" id="back_button_off">Back</button><br>
+<button class="button" onclick="next_question( 2)" style="background-color: #1b5e20;">Strongly Agree</button> <br>
+<button class="button" onclick="next_question( 1)" style="background-color: #4caf50;">Agree</button> <br>
+<button class="button" onclick="next_question( 0)" style="background-color: #bbbbbb;">Neutral/Unsure</button> <br>
+<button class="button" onclick="next_question(-1)" style="background-color: #f44336;">Disagree</button> <br>
+<button class="button" onclick="next_question(-2)" style="background-color: #b71c1c;">Strongly Disagree</button> <br>
+<button class="small_button" onclick="prev_question()" id="back_button">Previous</button>
+<button class="small_button_off" id="back_button_off">Previous</button><br>
 
-<!-- Test JS -->
+
 <script>
+    var scores = [0, 0, 0, 0, 0, 0, 0, 0, 0];//fed, dem, glo, mil, fre, equ, sec, pro, mul - User's scores
+    var qn = 0; // Question number
+    var answers = [];
+    var quests = [];
+    init_all_questions(quests);
+    init_question(quests);
 
-    // variables
-    var answers = new Object();     // Store user's answers
-    var qn = 0; // Current question order
-
-
-    // Populate questionsObject
-
-    var questionsObject = new Object();     // Question objects with ID keys
-    questions.forEach(populateQO);
-
-    function populateQO(value) {
-      questionsObject[value['id']] = value
+    function init_all_questions(qs) {
+        //1,2,3,-2,-4
+        var t = [1,2,3,5,7];
+        for(var i = 0; i < 9; i++) //Number of Axes
+        {
+            var c = Math.random()<0.5;
+            for(var j = 0; j < 5; j++) //Number of questions per axis
+            {
+                var m = [i,c?t[j]:(8-t[j]),Math.floor(Math.random()*questions[i][c?t[j]:(8-t[j])].length)];
+                qs.push(m);
+            }
+        }
+        shuffle(qs);
     }
-
-
-    // Populate & shuffle questionsOrder
-
-    var questionsOrder = Object.keys(questionsObject); //Array of shuffled question IDs
-    shuffleArray(questionsOrder);
-
-    function shuffleArray(array) {
-      for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-      }
-    }
-
-    // Question initialization
-
-    init_question();
 
     function init_question() {
-        $("#question-text").html(questionsObject[questionsOrder[qn]].question);
-        $("#question-number").html("Question "+(qn + 1)+" of "+(questionsOrder.length));
-
-
-
-        if (jQuery.isEmptyObject(answers)) {
-            $('#back_button').hide()
-            $('#back_button_off').show()
+        var ax = quests[qn][0];
+        var rate = quests[qn][1];
+        var num = quests[qn][2];
+        document.getElementById("question-text").innerHTML = questions[ax][rate][num];
+        document.getElementById("question-number").innerHTML = "Question " + (qn + 1) + " of " + (quests.length);
+        if (qn == 0) {
+            document.getElementById("back_button").style.display = 'none';
+            document.getElementById("back_button_off").style.display = 'block';
         } else {
-            $('#back_button').show()
-            $('#back_button_off').hide()
+            document.getElementById("back_button").style.display = 'block';
+            document.getElementById("back_button_off").style.display = 'none';
         }
+
     }
 
+    function shuffle(array) {
+      var currentIndex = array.length, temporaryValue, randomIndex;
 
-    // Next question
+      // While there remain elements to shuffle...
+      while (0 !== currentIndex) {
 
-    function next_question(answer) {
-        if (qn === questionsOrder.length) {
-            return;
-        }
+        // Pick a remaining element...
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex -= 1;
 
-        answers[questionsOrder[qn]] = answer;
+        // And swap it with the current element.
+        temporaryValue = array[currentIndex];
+        array[currentIndex] = array[randomIndex];
+        array[randomIndex] = temporaryValue;
+      }
+
+      return array;
+    }
+
+    function next_question(mult) {
+        var ax = quests[qn][0];
+        var rate = quests[qn][1];
+        var num = quests[qn][2];
+        scores[ax] += mult*(rate<4?1:-1);
+
+        answers[qn] = mult;
         qn++;
-
-        if (qn < questionsOrder.length) {
+        if (qn < quests.length) {
             init_question();
         } else {
             results();
         }
     }
-
-
-    // Previous question
-
     function prev_question() {
-        if (jQuery.isEmptyObject(answers)) {
-            $('#back_button').hide()
-            $('#back_button_off').show()
+        if (qn == 0) {
             return;
         }
         qn--;
-
-        delete answers[questionsOrder[qn]];
-
+        var ax = quests[qn][0];
+        var rate = quests[qn][1];
+        var num = quests[qn][2];
+        scores[ax] -= answers[qn]*(rate<4?1:-1);
         init_question();
     }
-
-
-    // RESULTS
-
+    function calc_score(score) {
+        return (50+5*score);
+    }
     function results() {
-
-        window.sessionStorage.answers = JSON.stringify(answers);
-
-
-        // Calculate final results
-        pct = percentageCalculation();
-        window.sessionStorage.percentages = JSON.stringify(pct);
-
-        // prepare arguments
-        var args = '?';
-        for (const i in Object.keys(pct)) {
-            effectName = Object.keys(pct)[i]
-            args += `${effectName}=${pct[effectName]}`
-
-            var cycle = parseInt(i)
-            if (cycle+1 !== Object.keys(pct).length) {
-                args += '&'
-            }
-        }
-
-        location.href = ((window.location.hostname == "2x2master.github.io") ? `feedback.html` : `results.html`) + args
-
+        location.href = `results.html`
+            + `?a=${calc_score(scores[0])}`
+            + `&b=${calc_score(scores[1])}`
+            + `&c=${calc_score(scores[2])}`
+            + `&d=${calc_score(scores[3])}`
+            + `&e=${calc_score(scores[4])}`
+            + `&f=${calc_score(scores[5])}`
+            + `&g=${calc_score(scores[6])}`
+            + `&h=${calc_score(scores[7])}`
+            + `&i=${calc_score(scores[8])}`;
     }
-
-
-    // Calculate percentage
-
-    function percentageCalculation() {
-        // calc max
-        var max = new Object(); // Max possible scores
-        var score = new Object(); // User scores
-        var pct = new Object(); // Percentages
-
-        // prepare
-        for (const id in answers) {
-            for (const effectName in questionsObject[id].effects) {
-                max[effectName] = 0
-                score[effectName] = 0
-            }
-        }
-
-        // get max & scores
-        for (const id in answers) {
-            // dismiss "don't know"
-            if (answers[id] !== null) {
-                for (const effectName in questionsObject[id].effects) {
-                    max[effectName] += Math.abs(questionsObject[id].effects[effectName]);
-                    score[effectName] += answers[id]*questionsObject[id].effects[effectName];
-                }
-            }
-        }
-
-        // calc percentage
-
-        for (const i in Object.keys(max)) {
-            effectName = Object.keys(max)[i]
-
-            if (max[effectName] > 0) {
-                pct[effectName] = (100*(max[effectName]+score[effectName])/(2*max[effectName])).toFixed(1)
-            } else {
-                pct[effectName] = 50
-            }
-        }
-
-        return pct;
-    }
-
 </script>
 </body>
