@@ -1,55 +1,55 @@
 // Axis Labels
 
-labels = ["social","econ","essence","moral","apply","ecol","socpol","relig","aesth"];
+labels = ["state","social","econ","spend","land","nation","mil","leader","appli"];
 
 axisNames = {
-        "social": "Social Axis",
+        "state": "State Axis",
+        "social": "Cultural Axis",
         "econ": "Economic Axis",
-        "essence": "Essence Worldview",
-        "moral": "Moral Worldview",
-        "apply": "Applicability",
-        "ecol": "Ecological Axis",
-        "socpol": "Social Politicization",
-        "relig": "Religious Axis",
-        "aesth": "Aesthetics"
+        "spend": "Social Spending Axis",
+        "land": "Land Axis",
+        "nation": "Nation Axis",
+        "mil": "Military Axis",
+        "leader": "Leadership Axis",
+        "appli": "Application Axis"
 };
 
 axisArrays = {
-        "social": ["Collectivist","Social","Balanced","Individual","Atomized"],
-        "econ": ["Planned","Nationalized","Mixed","Regulated","Unregulated"],
-        "essence": ["Constructivist","Balanced","Essentialist"],
-        "moral": ["Idealist","Principled","Pragmatic","Utilitarian"],
-        "apply": ["Particular","Balanced","Universal"],
-        "ecol": ["Industrial","Balanced","Ecological"],
-        "socpol": ["Apolitical","Balanced","Politicized"],
-        "relig": ["Atheist", "Secular", "Neutral", "Religious", "Fundamentalist"],
-        "aesth": ["Historic","Neutral","Futuristic"]
+        "state": ["Anarchist","Minarchist","Libertarian","Liberal","Post-Libertarian"],
+        "social": ["Ultraprogressive","Progressive","Neutral","Conservative","Reactionary"],
+        "econ": ["Planned","Regulatory","Balanced","Deregulated","Laissez-Faire"],
+        "spend": ["Welfarist","Balanced","Fiscal Conservative"],
+        "land": ["Propertarian","Syncretic","Georgist"],
+        "nation": ["Chauvinist","Nationalist","Moderate","Internationalist","Globalist"],
+        "mil": ["Isolationist","Peaceful","Syncretic","Interventionist","Imperialist"],
+        "leader": ["Direct Democratic", "Democratic", "Mixed", "Religious", "Autocratic"],
+        "appli": ["Insurrectionary", "Revolutionary", "Mixed", "Reformist", "Non-Violent"]
 };
 
 // Values
 
 values = {
-    "left":["individual","market","essentialist","pragmatic","universal","ecological","politicized","religious","futurist"],
-    "right":["collective","planned","constructivist","idealist","particular","industrial","apolitical","secular","historic"]
+    "left":["anarchy","progress","reg","welfare","property","national","isolation","dem","revo"],
+    "right":["minarchy","conserve","markets","aust","georgist","global","inter","auto","reform"]
 };
 
 valueColors = {
-"individual":"#009999",
-"collective":"#DA0000",
-"market":"#048CF4",
-"planned":"#FF4900",
-"essentialist":"#00CC00",
-"constructivist":"#CD0074",
-"pragmatic":"#A101B3",
-"idealist":"#6AB001",
-"universal":"#048CF4",
-"particular":"#FFBF00",
-"ecological":"#00CC00",
-"industrial":"#FF7400",
-"politicized":"#009999",
-"apolitical":"#808080",
-"religious":"#FFBF00",
-"secular":"#A600A6",
-"futurist":"#074FF5",
-"historic":"#FF7400"
+"anarchy":"#FDFD00",
+"minarchy":"#1c4aea",
+"progress":"#49DB0B",
+"conserve":"#BD5BE5",
+"reg":"#260099",
+"markets":"#FCC52B",
+"welfare":"#de2b33",
+"aust":"#39386E",
+"property":"#EDEF22",
+"georgist":"#0ED145",
+"national":"#F7941E",
+"global":"#00AAF3",
+"isolation":"#008000",
+"inter":"#002395",
+"dem":"#F5DD00",
+"auto":"#9200C1",
+"revo":"#FE0010",
+"reform":"#e791ab"
 };
