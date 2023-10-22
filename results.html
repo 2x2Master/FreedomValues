@@ -29,7 +29,7 @@
     <div class="bar v4" id="bar-v4"><div class="text-wrapper" id="v4"></div></div>
     <img id="img-v4" src="v4.png" height="128pt"/>
 </div>
-<h2>Economic Axis: <span class="weight-300" id="b3"></span></h2>
+<h2>Regulation Axis: <span class="weight-300" id="b3"></span></h2>
 <div class="axis">
     <img id="img-v5" src="v5.png" height="128pt"/>
     <div class="bar v5" id="bar-v5"><div class="text-wrapper" id="v5"></div></div>
@@ -43,28 +43,28 @@
     <div class="bar v8" id="bar-v8"><div class="text-wrapper" id="v8"></div></div>
     <img id="img-v8" src="v8.png" height="128pt"/>
 </div>
-<h2>Foreign Axis: <span class="weight-300" id="b5"></span></h2>
+<h2>Spending Axis: <span class="weight-300" id="b5"></span></h2>
 <div class="axis">
     <img id="img-v9" src="v9.png" height="128pt"/>
     <div class="bar v9" id="bar-v9"><div class="text-wrapper" id="v9"></div></div>
     <div class="bar v10" id="bar-v10"><div class="text-wrapper" id="v10"></div></div>
     <img id="img-v10" src="v10.png" height="128pt"/>
 </div>
-<h2>Leadership Axis: <span class="weight-300" id="b6"></span></h2>
+<h2>Foreign Axis: <span class="weight-300" id="b6"></span></h2>
 <div class="axis">
     <img id="img-v11" src="v11.png" height="128pt"/>
     <div class="bar v11" id="bar-v11"><div class="text-wrapper" id="v11"></div></div>
     <div class="bar v12" id="bar-v12"><div class="text-wrapper" id="v12"></div></div>
     <img id="img-v12" src="v12.png" height="128pt"/>
 </div>
-<h2>Achivement Axis: <span class="weight-300" id="b7"></span></h2>
+<h2>Leadership Axis: <span class="weight-300" id="b7"></span></h2>
 <div class="axis">
     <img id="img-v13" src="v13.png" height="128pt"/>
     <div class="bar v13" id="bar-v13"><div class="text-wrapper" id="v13"></div></div>
     <div class="bar v14" id="bar-v14"><div class="text-wrapper" id="v14"></div></div>
     <img id="img-v14" src="v14.png" height="128pt"/>
 </div>
-<h2>Ethics Axis: <span class="weight-300" id="b8"></span></h2>
+<h2>Achievement Axis: <span class="weight-300" id="b8"></span></h2>
 <div class="axis">
     <img id="img-v15" src="v15.png" height="128pt"/>
     <div class="bar v15" id="bar-v15"><div class="text-wrapper" id="v15"></div></div>
@@ -101,10 +101,10 @@
     b2Array = ["Ultraprogressive","Progressive","Cultural Liberal","Moderate","Conservative","Traditionalist","Reactionary"]
     b3Array = ["Controlled","Directed","Regulated","Neutral","Permissive","Deregulated","Laissez-Faire"]
     b4Array = ["Propertarian","Rentier","Private","Syncretic","Pro-LVT","Georgist","Common Land"]
-    b5Array = ["Isolationist","Defensive","Non-Interventionist","Occasional","Interventionist","Expansionist","Imperialist"]
-    b6Array = ["Direct Democratic","Proportional","Representative","Electocratic","Concentrated","Oligarchic","Absolute"]
-    b7Array = ["Pacifist","Reformist","Passive","Varied","Unruly","Revolutionary","Insurrectionary"]
-    b8Array = ["Deontological","Deontological","Deontological","Balanced","Utilitarian","Utilitarian","Utilitarian"]
+    b5Array = ["Propertarian","Rentier","Private","Syncretic","Pro-LVT","Georgist","Common Land"]
+    b6Array = ["Isolationist","Defensive","Non-Interventionist","Occasional","Interventionist","Expansionist","Imperialist"]
+    b7Array = ["Direct Democratic","Proportional","Representative","Electocratic","Concentrated","Oligarchic","Absolute"]
+    b8Array = ["Pacifist","Reformist","Passive","Varied","Unruly","Revolutionary","Insurrectionary"]
 
     function setLabel(val,ary) {
         if (val > 100) { return "" } else
@@ -299,14 +299,14 @@
 
         ctx.font="300 30px Montserrat"
         ctx.textAlign="center"
-        ctx.fillText("Leader Axis: " + document.getElementById("b1").innerHTML, 400, 175)
-        ctx.fillText("Economic Axis : " + document.getElementById("b2").innerHTML, 400, 295)
-        ctx.fillText("Nation Axis : " + document.getElementById("b3").innerHTML, 400, 415)
-        ctx.fillText("Army Axis : " + document.getElementById("b4").innerHTML, 400, 535)
-        ctx.fillText("Class Axis : " + document.getElementById("b5").innerHTML, 400, 655)
-        ctx.fillText("Cultural Axis : " + document.getElementById("b6").innerHTML, 400, 775)
-        ctx.fillText("Social Axis : " + document.getElementById("b7").innerHTML, 400, 895)
-        ctx.fillText("Focus Axis : " + document.getElementById("b8").innerHTML, 400, 1015)
+        ctx.fillText("State Axis: " + document.getElementById("b1").innerHTML, 400, 175)
+        ctx.fillText("Social Axis: " + document.getElementById("b2").innerHTML, 400, 295)
+        ctx.fillText("Regulation Axis: " + document.getElementById("b3").innerHTML, 400, 415)
+        ctx.fillText("Land Axis: " + document.getElementById("b4").innerHTML, 400, 535)
+        ctx.fillText("Spending Axis: " + document.getElementById("b5").innerHTML, 400, 655)
+        ctx.fillText("Foreign Axis: " + document.getElementById("b6").innerHTML, 400, 775)
+        ctx.fillText("Leadership Axis: " + document.getElementById("b7").innerHTML, 400, 895)
+        ctx.fillText("Achievement Axis: " + document.getElementById("b8").innerHTML, 400, 1015)
 
         document.getElementById("banner").src = c.toDataURL();
     }
