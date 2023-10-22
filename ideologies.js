@@ -106,9 +106,9 @@ ideologies = [
     {
         "name": "Ordo-Liberalism",
         "stats": {
-            "b1": 10,
+            "b1": 20,
             "b2": 50,
-            "b3": 50,
+            "b3": 45,
             "b4": 65,
             "b5": 35,
             "b6": 55,
@@ -128,10 +128,22 @@ ideologies = [
             "b8": 60
         }
     },
+        "name": "Liberalism",
+        "stats": {
+            "b1": 20,
+            "b2": 55,
+            "b3": 50,
+            "b4": 60,
+            "b5": 40,
+            "b6": 35,
+            "b7": 85,
+            "b8": 90
+        }
+    },
     {
         "name": "Libertarian Paternalism",
         "stats": {
-            "b1": 5,
+            "b1": 15,
             "b2": 50,
             "b3": 75,
             "b4": 50,
