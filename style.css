@@ -145,7 +145,7 @@ div.bar {
     border-right-width: 1px;
     border-top-style: solid;
     border-bottom-style: solid;
-    border-color: #000000;
+    border-color: #222222;
     background-color: #c0c0c0;
     display: block;
     width: 50%;
@@ -154,86 +154,86 @@ div.text-wrapper {
     font-family: 'Montserrat', sans-serif;
     font-size: 36pt;
     line-height: 36pt;
-    color: #000000;
+    color: #222222;
     display: inline-block;
 }
 div.v1 {
-    background-color: #c02500;
+    background-color: #fdfd00;
     text-align: left;
     border-right-style: solid;
 }
 div.v2 {
-    background-color: #ff0050;
+    background-color: #1c4aea;
     text-align: right;
     border-left-style: solid;
 }
 div.v3 {
-    background-color: #a00000;
+    background-color: #49db0b;
     text-align: left;
     border-right-style: solid;
 }
 div.v4 {
-    background-color: #ffa000;
+    background-color: #bd5be5;
     text-align: right;
     border-left-style: solid;
 }
 div.v5 {
-    background-color: #c07500;
+    background-color: #e92e9c;
     text-align: left;
     border-right-style: solid;
 }
 div.v6 {
-    background-color: #75c0c0;
+    background-color: #fcc52b;
     text-align: right;
     border-left-style: solid;
 }
 div.v7 {
-    background-color: #750000;
+    background-color: #edef22;
     text-align: left;
     border-right-style: solid;
 }
 div.v8 {
-    background-color: #c0c0c0;
+    background-color: #0ed145;
     text-align: right;
     border-left-style: solid;
 }
 div.v9 {
-    background-color: #e00000;
+    background-color: #008000;
     text-align: left;
     border-right-style: solid;
 }
 div.v10 {
-    background-color: #a0a000;
+    background-color: #004489;
     text-align: right;
     border-left-style: solid;
 }
 div.v11 {
-    background-color: #5050c0;
+    background-color: #03a9f4;
     text-align: left;
     border-right-style: solid;
 }
 div.v12 {
-    background-color: #7500c0;
+    background-color: #9200c1;
     text-align: right;
     border-left-style: solid;
 }
 div.v13 {
-    background-color: #00a000;
+    background-color: #e791ab;
     text-align: left;
     border-right-style: solid;
 }
 div.v14 {
-    background-color: #ff75c0;
+    background-color: #fe0010;
     text-align: right;
     border-left-style: solid;
 }
 div.v15 {
-    background-color: #c07575;
+    background-color: #ff7b09;
     text-align: left;
     border-right-style: solid;
 }
 div.v16 {
-    background-color: #c050c0;
+    background-color: #007ef3;
     text-align: right;
     border-left-style: solid;
 }
