@@ -116,6 +116,7 @@ ideologies = [
             "b8": 90
         }
     },
+    {
         "name": "Right-Libertarianism",
         "stats": {
             "b1": 30,
@@ -128,6 +129,7 @@ ideologies = [
             "b8": 60
         }
     },
+    {
         "name": "Liberalism",
         "stats": {
             "b1": 20,
