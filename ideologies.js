@@ -76,5 +76,18 @@ ideologies = [
             "b7": 15,
             "b8": 35
         }
+    },
+    {
+        "name": "Bleeding-Heart Libertarianism",
+        "stats": {
+            "b1": 25,
+            "b2": 70,
+            "b3": 30,
+            "b4": 50,
+            "b5": 35,
+            "b6": 65,
+            "b7": 85,
+            "b8": 80
+        }
     }
 ];
