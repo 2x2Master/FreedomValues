@@ -80,7 +80,7 @@ ideologies = [
     {
         "name": "Bleeding-Heart Libertarianism",
         "stats": {
-            "b1": 25,
+            "b1": 30,
             "b2": 70,
             "b3": 30,
             "b4": 50,
@@ -104,6 +104,31 @@ ideologies = [
         }
     },
     {
+        "name": "Ordo-Liberalism",
+        "stats": {
+            "b1": 10,
+            "b2": 50,
+            "b3": 50,
+            "b4": 65,
+            "b5": 35,
+            "b6": 55,
+            "b7": 85,
+            "b8": 90
+        }
+    },
+        "name": "Right-Libertarianism",
+        "stats": {
+            "b1": 30,
+            "b2": 50,
+            "b3": 20,
+            "b4": 80,
+            "b5": 80,
+            "b6": 70,
+            "b7": 85,
+            "b8": 60
+        }
+    },
+    {
         "name": "Libertarian Paternalism",
         "stats": {
             "b1": 5,
@@ -112,7 +137,7 @@ ideologies = [
             "b4": 50,
             "b5": 25,
             "b6": 50,
-            "b7": 70,
+            "b7": 65,
             "b8": 95
         }
     }
