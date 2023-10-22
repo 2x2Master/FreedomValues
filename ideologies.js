@@ -89,5 +89,31 @@ ideologies = [
             "b7": 85,
             "b8": 80
         }
+    },
+    {
+        "name": "Social Libertarianism",
+        "stats": {
+            "b1": 20,
+            "b2": 60,
+            "b3": 60,
+            "b4": 45,
+            "b5": 20,
+            "b6": 65,
+            "b7": 85,
+            "b8": 90
+        }
+    },
+    {
+        "name": "Libertarian Paternalism",
+        "stats": {
+            "b1": 5,
+            "b2": 50,
+            "b3": 75,
+            "b4": 50,
+            "b5": 25,
+            "b6": 50,
+            "b7": 70,
+            "b8": 95
+        }
     }
 ];
