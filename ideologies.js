@@ -12,6 +12,19 @@ ideologies = [
             "b8": 90
         }
     },
+        {
+        "name": "National Liberalism",
+        "stats": {
+            "b1": 20,
+            "b2": 40,
+            "b3": 65,
+            "b4": 65,
+            "b5": 70,
+            "b6": 60,
+            "b7": 90,
+            "b8": 85
+        }
+    },
     {
         "name": "Anarcho-Capitalism",
         "stats": {
