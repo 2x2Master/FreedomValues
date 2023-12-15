@@ -1,6 +1,6 @@
 questions = [
     {
-        "question": "The state stands in the way of liberty, and should be abolished.",
+        "question": "The state is a monopoly on violence.",
         "effect": {
             "b1": 1,
             "b2": 0,
@@ -39,7 +39,7 @@ questions = [
         }
     },
     {
-        "question": "If someone is first to claim an area of land, they are entitled to profit from it.",
+        "question": "All rights derive from property rights.",
         "effect": {
             "b1": 0,
             "b2": 0,
@@ -65,7 +65,7 @@ questions = [
         }
     },
     {
-        "question": "We shouldn't intervene in foreign conflict that don't affect our nation.",
+        "question": "We shouldn't intervene in foreign conflicts that don't affect our nation.",
         "effect": {
             "b1": 0,
             "b2": 0,
